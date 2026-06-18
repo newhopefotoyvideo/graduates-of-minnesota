@@ -26,7 +26,7 @@ export default function Footer() {
           <Link href="/">Accessibility Statement</Link>
         </div>
         <div className="footer-copy">
-          © 2035 by E&amp;J. Powered and secured by Vercel
+          © 2035 by E&amp;J. Powered and secured by Wix
         </div>
       </div>
     </footer>
