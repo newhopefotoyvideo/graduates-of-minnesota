@@ -42,13 +42,13 @@ const faqs = [
 ];
 
 export default function FAQ() {
-  const [open, setOpen] = useState(null);
+  const [open, setOpen] = useState(0);
 
   return (
     <>
-      <section className="page-head sky script-title">
+      <section className="page-head sky script-title sage">
         <div className="container">
-          <h1>your questions answered</h1>
+          <h1>Your Questions Answered</h1>
           <p className="lead">
             All the nitty-gritty details you might need. If you have a question
             that isn&rsquo;t answered here, feel free to reach out to us!

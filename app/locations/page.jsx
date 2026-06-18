@@ -94,7 +94,7 @@ export default function Locations() {
 
       <section className="section section-cream">
         <div className="container">
-          <div className="loc-banner">
+          <div className="loc-banner right">
             <h2>Love the Outdoors?</h2>
             <p>
               If you feel most yourself around lakes, trees, and open skies,

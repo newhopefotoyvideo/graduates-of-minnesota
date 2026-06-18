@@ -5,34 +5,29 @@ export const metadata = { title: "Contact | Graduates of Minnesota" };
 export default function Contact() {
   return (
     <>
-      <section className="page-head yellow">
+      <section className="page-head yellow contact-head">
         <div className="container">
-          <h1 style={{ color: "var(--blue)" }}>Contact &amp; Inquire</h1>
+          <h1>Contact &amp; Inquire</h1>
         </div>
       </section>
 
-      <section className="section section-yellow" style={{ background: "var(--yellow)", paddingTop: 0 }}>
-        <div className="container">
-          <p className="script" style={{ color: "var(--red)", fontSize: "1.8rem", marginBottom: 30 }}>
-            Based In Minnesota
-          </p>
-          <div className="contact-info">
-            <div>
-              <h2>Our Location</h2>
-              <p>Based In Minnesota</p>
-            </div>
-            <div>
-              <p>
-                500 Terry Francine St.{"\n"}San Francisco, CA 94158{"\n"}
-                123-456-7890{"\n"}info@mysite.com
-              </p>
-            </div>
-            <div>
-              <p>
-                Monday – Friday:{"\n"}09:00 – 18:00{"\n"}Saturday – Sunday:{"\n"}
-                Closed
-              </p>
-            </div>
+      <section className="contact-detail">
+        <div className="container contact-detail-grid">
+          <div>
+            <p className="contact-label">Our Location</p>
+            <p className="contact-script script">Based In Minnesota</p>
+          </div>
+          <div>
+            <p className="contact-lines">
+              500 Terry Francine St.{"\n"}San Francisco, CA 94158 123-456-7890
+              {"\n"}info@mysite.com
+            </p>
+          </div>
+          <div>
+            <p className="contact-lines">
+              Monday &ndash; Friday:{"\n"}09:00 &ndash; 18:00{"\n"}Saturday &ndash;
+              Sunday:{"\n"}Closed
+            </p>
           </div>
         </div>
       </section>
@@ -64,18 +59,18 @@ export default function Contact() {
                 <input id="email" name="email" type="email" required />
               </div>
               <div className="field">
-                <label>What Package are you in?</label>
-                <div className="radio-row">
+                <label>Which Package interest you?*</label>
+                <div className="check-row">
                   <label>
-                    <input type="radio" name="package" value="The Classic" /> The
+                    <input type="checkbox" name="package" value="The Classic" /> The
                     Classic
                   </label>
                   <label>
-                    <input type="radio" name="package" value="The Signiture" /> The
+                    <input type="checkbox" name="package" value="The Signiture" /> The
                     Signiture
                   </label>
                   <label>
-                    <input type="radio" name="package" value="The Experience" /> The
+                    <input type="checkbox" name="package" value="The Experience" /> The
                     Experience
                   </label>
                 </div>
@@ -88,7 +83,7 @@ export default function Contact() {
                 <label htmlFor="notes">Anything You&rsquo;d Like Us To Know?</label>
                 <textarea id="notes" name="notes" />
               </div>
-              <button type="submit" className="btn btn-blue" style={{ width: "100%" }}>
+              <button type="submit" className="btn btn-olive contact-submit">
                 Subscribe Now
               </button>
             </form>

@@ -7,25 +7,25 @@ const photos = Array.from({ length: 12 }, (_, i) => `/images/portfolio-${i + 1}.
 export default function Portfolio() {
   return (
     <>
-      <section className="page-head sky">
-        <div className="container">
+      <section className="portfolio-head">
+        <div className="container portfolio-head-inner">
           <h1>Portfolio</h1>
-          <p className="lead">A Selection of Our Latest Projects</p>
+          <span className="sub">A Selection of Our Latest Projects</span>
         </div>
       </section>
 
-      <section className="section section-cream">
+      <section className="portfolio-section">
         <div className="container">
           <div className="gallery">
             {photos.map((src, i) => (
-              <Image
-                key={src}
-                src={src}
-                alt={`Portfolio image ${i + 1}`}
-                width={1000}
-                height={1200}
-                style={{ height: "auto" }}
-              />
+              <div className="cell" key={src}>
+                <Image
+                  src={src}
+                  alt={`Portfolio image ${i + 1}`}
+                  width={600}
+                  height={600}
+                />
+              </div>
             ))}
           </div>
         </div>
