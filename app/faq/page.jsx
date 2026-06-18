@@ -56,7 +56,7 @@ export default function FAQ() {
         </div>
       </section>
 
-      <section className="section section-sky">
+      <section className="section bg-sky">
         <div className="container">
           <div className="faq-list">
             {faqs.map((item, i) => (

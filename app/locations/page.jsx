@@ -1,4 +1,6 @@
-export const metadata = { title: "Locations | Graduates of Minnesota" };
+import Reveal from "@/components/Reveal";
+
+export const metadata = { title: "Locations" };
 
 const cityLocations = [
   {
@@ -74,34 +76,30 @@ export default function Locations() {
         </div>
       </section>
 
-      <section className="section section-cream">
+      <section className="section loc-section">
         <div className="container">
-          <div className="loc-banner">
+          <Reveal className="loc-banner">
             <h2>Drawn to the City?</h2>
             <p>
               If you love coffee shops, architecture, fashion, and a more
-              editorial look, downtown locations can add personality and energy
-              to your session.
+              editorial look, downtown locations can add personality and energy to
+              your session.
             </p>
-          </div>
+          </Reveal>
           <div className="loc-list">
             {cityLocations.map((loc) => (
               <LocItem key={loc.title} loc={loc} />
             ))}
           </div>
-        </div>
-      </section>
 
-      <section className="section section-cream">
-        <div className="container">
-          <div className="loc-banner right">
+          <Reveal className="loc-banner right" style={{ marginTop: "clamp(40px, 6vw, 80px)" }}>
             <h2>Love the Outdoors?</h2>
             <p>
-              If you feel most yourself around lakes, trees, and open skies,
-              choose a natural setting. Minnesota&rsquo;s parks and trails create
-              timeless images that never go out of style.
+              If you feel most yourself around lakes, trees, and open skies, choose
+              a natural setting. Minnesota&rsquo;s parks and trails create timeless
+              images that never go out of style.
             </p>
-          </div>
+          </Reveal>
           <div className="loc-list">
             {outdoorLocations.map((loc) => (
               <LocItem key={loc.title} loc={loc} />

@@ -1,8 +1,6 @@
-import Image from "next/image";
+import Gallery from "@/components/Gallery";
 
-export const metadata = { title: "Portfolio | Graduates of Minnesota" };
-
-const photos = Array.from({ length: 12 }, (_, i) => `/images/portfolio-${i + 1}.jpg`);
+export const metadata = { title: "Portfolio" };
 
 export default function Portfolio() {
   return (
@@ -16,18 +14,7 @@ export default function Portfolio() {
 
       <section className="portfolio-section">
         <div className="container">
-          <div className="gallery">
-            {photos.map((src, i) => (
-              <div className="cell" key={src}>
-                <Image
-                  src={src}
-                  alt={`Portfolio image ${i + 1}`}
-                  width={600}
-                  height={600}
-                />
-              </div>
-            ))}
-          </div>
+          <Gallery />
         </div>
       </section>
     </>

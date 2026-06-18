@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-export const metadata = { title: "Contact | Graduates of Minnesota" };
+export const metadata = { title: "Contact" };
 
 export default function Contact() {
   return (
     <>
-      <section className="page-head yellow contact-head">
+      <section className="contact-head">
         <div className="container">
           <h1>Contact &amp; Inquire</h1>
         </div>
