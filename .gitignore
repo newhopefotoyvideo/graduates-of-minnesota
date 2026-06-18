@@ -6,3 +6,5 @@ out
 .playwright-mcp
 wix-*.png
 download-images.mjs
+
+.vercel
