@@ -917,6 +917,16 @@ img {
   transition: opacity 0.2s ease, transform 0.2s ease;
   z-index: 120;
 }
+/* Invisible bridge across the gap between the button and the menu so the
+   submenu stays open while the cursor travels down to click an item. */
+.nav-submenu::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
 .nav-has-sub:hover .nav-submenu,
 .nav-has-sub:focus-within .nav-submenu {
   opacity: 1;
