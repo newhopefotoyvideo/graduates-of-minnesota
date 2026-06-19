@@ -4,40 +4,44 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "Can I bring a plus one to the wedding?",
-    a: 'An FAQ section can be used to quickly answer common questions about your business like "Where do you ship to?", "What are your opening hours?", or "How can I book a service?".',
+    q: "What should I wear?",
+    a: "Choose outfits that feel like you. We recommend solid colors, layers, and pieces you’ll still love years from now. Once booked, we’ll send a style guide with outfit tips.",
   },
   {
-    q: "Is there an open bar?",
-    a: "FAQs are a great way to help site visitors find quick answers to common questions about your business and create a better navigation experience.",
+    q: "What if I’m awkward in front of the camera?",
+    a: "Perfect. Most of our seniors say this before their session! We’ll guide you through poses and prompts so you never have to wonder what to do.",
   },
   {
-    q: "What is the RSVP deadline, and how do I respond?",
-    a: "FAQs can be added to any page on your site or to your Wix mobile app, giving access to members on the go.",
+    q: "Can I bring props?",
+    a: "Absolutely! Caps and gowns, sports equipment, instruments, books, flowers, pets, college gear, and anything meaningful to your story are welcome.",
   },
   {
-    q: "Are children allowed at the wedding?",
-    a: "To edit or remove this FAQ, head to your site dashboard and add your own common questions and answers so visitors can find what they need quickly.",
+    q: "How do I choose a location?",
+    a: "We’ll help! Whether you’re drawn to city views, lakes, gardens, or your school campus, we’ll recommend locations that fit your personality and vision.",
   },
   {
-    q: "Will transportation be provided to the wedding venue?",
-    a: "Add as many FAQs as you like. Group them by topic to help visitors browse the questions that matter most to them.",
+    q: "Can my family join for a few photos?",
+    a: "Yes! Family photos can be added to your session, or they’re included in our “The Experience” package.",
   },
   {
-    q: "What is the best way to get to the hotel from the airport?",
-    a: "Provide clear, concise answers so visitors can feel confident and prepared before reaching out to you.",
+    q: "What happens if it rains?",
+    a: "Minnesota weather keeps us on our toes. If conditions aren’t ideal, we’ll reschedule at no additional charge.",
   },
   {
-    q: "Will parking be available at the wedding venue?",
-    a: "FAQs help reduce repetitive questions and give your visitors the information they need on their own schedule.",
+    q: "How long does it take to receive my photos?",
+    a: "Most galleries are delivered within 2–3 weeks, with sneak peeks often shared sooner.",
   },
   {
-    q: "Are there alternative accommodation options nearby?",
-    a: "Use this space to share helpful details, recommendations, and anything else your visitors may want to know.",
+    q: "Do you photograph college graduates too?",
+    a: "Yes! We photograph high school, college, trade school, graduate school, and professional program graduates.",
   },
   {
-    q: "Will vegetarian or special dietary meals be available at the wedding?",
-    a: "Answer the questions your visitors ask most so they can plan ahead with confidence.",
+    q: "How do I book?",
+    a: "Simply fill out our inquiry form and we’ll reach out to discuss your vision, package selection, and available dates.",
+  },
+  {
+    q: "How far in advance should I book?",
+    a: "Spring and fall dates fill quickly. We recommend booking 1–3 months in advance for the best availability.",
   },
 ];
 

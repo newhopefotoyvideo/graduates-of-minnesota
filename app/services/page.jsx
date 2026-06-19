@@ -99,7 +99,7 @@ export default function Services() {
             interested in and how we can help - we&rsquo;ll get back to you as soon
             as possible.
           </p>
-          <form action="https://formsubmit.co/info@mysite.com" method="POST">
+          <form action="https://formsubmit.co/contact@graduatesofminnesota.com" method="POST">
             <div className="form-row">
               <div className="field">
                 <label htmlFor="first">First name*</label>

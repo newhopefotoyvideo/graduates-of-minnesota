@@ -45,7 +45,7 @@ export default function Contact() {
           />
           <div className="contact-form-card">
             <h2>The Next Chapter Starts Here</h2>
-            <form action="https://formsubmit.co/info@mysite.com" method="POST">
+            <form action="https://formsubmit.co/contact@graduatesofminnesota.com" method="POST">
               <div className="form-row">
                 <div className="field">
                   <label htmlFor="first">First name*</label>
