@@ -20,7 +20,11 @@ export default function Footer() {
           <div className="footer-block">
             Give us a Call:
             <br />
-            <a href="tel:+16512086181">(651) 208-6181</a>
+            <a href="tel:+15074120355">(507) 412-0355</a>
+            <br />
+            <a href="mailto:contact@graduatesofminnesota.com">
+              contact@graduatesofminnesota.com
+            </a>
           </div>
           <div className="footer-block">
             <Link href="/">Privacy Policy</Link>

@@ -19,10 +19,14 @@ export default function Contact() {
           </div>
           <div>
             <p className="contact-lines">
-              Serving all of the Twin Cities —{"\n"}Minneapolis, Saint Paul &amp;
-              surrounding areas{"\n"}
+              Based in Minnesota —{"\n"}serving all of the Twin Cities,
+              Minneapolis, Saint Paul &amp; surrounding areas{"\n"}
               {"\n"}
-              <a href="tel:+16512086181">(651) 208-6181</a>
+              <a href="tel:+15074120355">(507) 412-0355</a>
+              {"\n"}
+              <a href="mailto:contact@graduatesofminnesota.com">
+                contact@graduatesofminnesota.com
+              </a>
             </p>
           </div>
           <div>
