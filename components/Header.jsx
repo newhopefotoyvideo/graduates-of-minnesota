@@ -4,8 +4,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
+// "Home" is now a group: the original editorial layout plus three alternate
+// designs (Magazine / Cinematic / Boutique) shown as a submenu.
+const homeVersions = [
+  { label: "Editorial", note: "The original", href: "/" },
+  { label: "Magazine", note: "Print-style spread", href: "/v2" },
+  { label: "Cinematic", note: "Full-bleed & bold", href: "/v3" },
+  { label: "Boutique", note: "Soft & playful", href: "/v4" },
+];
+const homeHrefs = homeVersions.map((v) => v.href);
+
 const navItems = [
-  { label: "Home", href: "/" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Inquiry Services Page", href: "/services" },
   { label: "Locations", href: "/locations" },
@@ -15,7 +24,7 @@ const navItems = [
 
 export default function Header() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
+  const isHome = homeHrefs.includes(pathname);
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -37,7 +46,11 @@ export default function Header() {
     };
   }, [open]);
 
-  const solid = !isHome || scrolled || open;
+  // The dark/light hero treatment only applies to the image-led layouts
+  // (Editorial "/" and Cinematic "/v3"). The Magazine and Boutique heroes
+  // sit on cream, so the header should be solid there.
+  const lightHero = pathname === "/" || pathname === "/v3";
+  const solid = !lightHero || scrolled || open;
 
   return (
     <header className={`site-header ${solid ? "solid" : "over-hero"}`}>
@@ -48,6 +61,28 @@ export default function Header() {
 
         <nav className="site-nav" aria-label="Primary">
           <ul>
+            <li className="nav-has-sub">
+              <button
+                type="button"
+                className="nav-sub-toggle"
+                aria-haspopup="true"
+              >
+                Home <span className="caret" aria-hidden="true">▾</span>
+              </button>
+              <ul className="nav-submenu">
+                {homeVersions.map((v) => (
+                  <li key={v.href}>
+                    <Link
+                      href={v.href}
+                      className={pathname === v.href ? "active" : ""}
+                    >
+                      {v.label}
+                      <small>{v.note}</small>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
@@ -82,6 +117,16 @@ export default function Header() {
       {/* Mobile drawer */}
       <div className={`nav-drawer ${open ? "open" : ""}`} aria-hidden={!open}>
         <ul>
+          <li>
+            <span className="drawer-group-label">Home</span>
+            <ul className="drawer-sub">
+              {homeVersions.map((v) => (
+                <li key={v.href}>
+                  <Link href={v.href}>{v.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </li>
           {navItems.map((item) => (
             <li key={item.href}>
               <Link href={item.href}>{item.label}</Link>

@@ -19,8 +19,10 @@ export default function Contact() {
           </div>
           <div>
             <p className="contact-lines">
-              500 Terry Francine St.{"\n"}San Francisco, CA 94158 123-456-7890
-              {"\n"}info@mysite.com
+              Serving all of the Twin Cities —{"\n"}Minneapolis, Saint Paul &amp;
+              surrounding areas{"\n"}
+              {"\n"}
+              <a href="tel:+16512086181">(651) 208-6181</a>
             </p>
           </div>
           <div>

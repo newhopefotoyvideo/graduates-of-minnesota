@@ -12,16 +12,15 @@ export default function Footer() {
         </div>
         <div className="footer-right">
           <div className="footer-block">
-            Friday, October 26, 2035, 5:00 PM
+            Based in Minnesota
             <br />
-            Safdie Foundry, San Francisco
+            Serving all of the Twin Cities — Minneapolis, Saint Paul &amp;
+            surrounding areas
           </div>
           <div className="footer-block">
             Give us a Call:
             <br />
-            Elaine 123-4567890
-            <br />
-            Jordan 123-4567890
+            <a href="tel:+16512086181">(651) 208-6181</a>
           </div>
           <div className="footer-block">
             <Link href="/">Privacy Policy</Link>
@@ -29,7 +28,7 @@ export default function Footer() {
             <Link href="/">Accessibility Statement</Link>
           </div>
           <div className="footer-copy">
-            © 2035 by E&amp;J. Powered and secured by Wix
+            © {new Date().getFullYear()} Graduates of Minnesota
           </div>
         </div>
       </div>

@@ -8,5 +8,7 @@ wix-*.png
 download-images.mjs
 mine-*.jpeg
 orig-*.jpeg
+ed-*.jpeg
+v[0-9]-*.jpeg
 
 .vercel
