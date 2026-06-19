@@ -1253,3 +1253,40 @@ img {
   .v4-mosaic-item.wide { grid-column: span 1; }
   .v4-cluster-2 { padding-bottom: 18%; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   MOBILE POLISH — phone-only refinements for the four home layouts.
+   Every rule lives inside a media query, so the desktop designs the client
+   approved are left exactly as they are. This centers the stacked heroes,
+   tames oversized script lines so they never run off the edge, and keeps
+   the boutique stickers fully on-screen.
+   ═══════════════════════════════════════════════════════════════════════ */
+@media (max-width: 600px) {
+  /* Once the hero columns stack, center them so they read as intentional
+     rather than desktop-left-aligned content orphaned above a photo. */
+  .v2-hero-grid,
+  .v4-hero-grid { text-align: center; }
+  .v2-hero-text .eyebrow,
+  .v4-hero .v4-tag { margin-left: auto; margin-right: auto; }
+  .v2-hero-serving,
+  .v4-hero-serving { margin-left: auto; margin-right: auto; }
+
+  /* The cursive script lines are wide; shrink + allow wrapping so a long
+     line like "Lets Celebrate Photos That Tell Your Story" can't overflow. */
+  .hero-script,
+  .v2-hero-script,
+  .v3-hero-script,
+  .v4-hero-script {
+    font-size: clamp(1.35rem, 6.2vw, 1.85rem);
+    overflow-wrap: break-word;
+  }
+
+  /* Boutique hero cluster: center it and give both polaroids room. */
+  .v4-hero-cluster { max-width: 320px; margin: 8px auto 0; }
+
+  /* Keep the playful stickers inside the viewport (they used negative
+     offsets that bled off-screen and got clipped on phones). */
+  .v4-sticker { font-size: 1.15rem; padding: 3px 13px; }
+  .v4-sticker-1 { right: 3%; }
+  .v4-sticker-2 { left: 3%; bottom: 5%; }
+}
